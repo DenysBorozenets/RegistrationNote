@@ -5,8 +5,9 @@ public interface RegexContainer {
     String REGEX_NAME_LAT = "^[A-Z][a-z]{1,20}$";
 
     String NAME = "regex.registration.name.regexp";
-    String any = "regex.registration.any.regexp";
+    String ANY = "regex.registration.any.regexp";
     String LOGIN = "regex.registration.nickname.regexp";
+    String GROUP = "regex.registration.group.regexp";
 
     String HOME_NUMBER = "regex.registration.numberHome.regexp";
     String MOBILE_NUMBER = "regex.registration.numberMobile.regexp";

@@ -11,6 +11,10 @@ public class View {
     public static final ResourceBundle resourceBundle =
             ResourceBundle.getBundle(BUNDLE_NAME, new Locale(UA));
 
+    public static String getString(String key){
+        return resourceBundle.getString(key);
+    }
+
     /**
      *
      * @param message
