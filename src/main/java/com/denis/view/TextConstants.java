@@ -24,6 +24,7 @@ public interface TextConstants {
     String GET_BUILDING = "messages.registration.get.building";
     String GET_FLAT = "messages.registration.get.flat";
     String GET_FULL_ADDRESS = "messages.registration.get.fullAddress";
+    String GET_DATE = "messages.registration.get.date";
 
     String WRONG_NICKNAME = "messages.registration.repeatedNickname";
     String WRONG_INPUT_DATA = "messages.registration.wrongInput";

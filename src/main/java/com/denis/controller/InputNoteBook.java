@@ -29,6 +29,16 @@ public class InputNoteBook {
     private String email;
     private String skype;
 
+    private String index;
+
+    private String city;
+    private String street;
+    private String houseNumber;
+    private String flat;
+    private String fullAddress;
+
+    private String date;
+
     public InputNoteBook(View view, Scanner scanner, Model model) {
         this.view = view;
         this.scanner = scanner;
@@ -64,12 +74,33 @@ public class InputNoteBook {
         this.mobileNumber = utilityController.
                 inputStringValueWithScanner(GET_MOBILE_NUMBER, View.getString(MOBILE_NUMBER));
         this.secondMobileNumber = utilityController.
-                inputStringValueWithScanner(GET_SECOND_NAME, View.getString(SECOND_MOBILE_NUMBER));
+                inputStringValueWithScanner(GET_SECOND_MOBILE_NUMBER, View.getString(SECOND_MOBILE_NUMBER));
 
         this.email = utilityController.
                 inputStringValueWithScanner(GET_EMAIL, View.getString(EMAIL));
         this.skype = utilityController.
                 inputStringValueWithScanner(GET_SKYPE, View.getString(LOGIN));
+
+        this.index = utilityController.
+                inputStringValueWithScanner(GET_INDEX, View.getString(INDEX));
+        this.city = utilityController.
+                inputStringValueWithScanner(GET_CITY, View.getString(CITY));
+        this.street = utilityController.
+                inputStringValueWithScanner(GET_STREET, View.getString(STREET));
+        this.houseNumber = utilityController.
+                inputStringValueWithScanner(GET_BUILDING, View.getString(BUILDING));
+        this.flat = utilityController.
+                inputStringValueWithScanner(GET_FLAT, View.getString(FLAT));
+        this.fullAddress = this.index + " " + this.city + " " + this.street + " " +
+                this.houseNumber + " " + this.flat;
+        view.printMessage(this.fullAddress);
+
+        this.date = utilityController.
+                inputStringValueWithScanner(GET_DATE, View.getString(DATE));
+
+
+
+        model.setField("firstName", this.firstName);
     }
 
 }

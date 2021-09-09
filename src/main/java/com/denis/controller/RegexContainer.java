@@ -20,4 +20,6 @@ public interface RegexContainer {
     String STREET = "regex.registration.street.regexp";
     String BUILDING = "regex.registration.building.regexp";
     String FLAT = "regex.registration.flat.regexp";
+
+    String DATE = "regex.registration.date.regexp";
 }
