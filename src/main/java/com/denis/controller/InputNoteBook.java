@@ -15,6 +15,10 @@ public class InputNoteBook {
 
 
     private String firstName;
+    private String secondName;
+    private String middleName;
+    private String fullName;
+
     private String login;
     public Group group;
 
@@ -32,6 +36,10 @@ public class InputNoteBook {
 
 
         this.firstName = utilityController.inputStringValueWithScanner(GET_NAME, str);
+        this.secondName = utilityController.inputStringValueWithScanner(GET_SECOND_NAME, str);
+        this.middleName = utilityController.inputStringValueWithScanner(GET_MIDDLE_NAME, str);
+        this.fullName = this.secondName + " " + this.firstName.charAt(0) + ".";
+        view.printMessage(this.fullName);
     }
 
 }
