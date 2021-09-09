@@ -7,8 +7,8 @@ public class View {
     private static final String UA = "ua";
     private static final String EN = "en";
 
-    private static final String BUNDLE_NAME = "messages";
-    private static final ResourceBundle resourceBundle =
+    static String BUNDLE_NAME = "messages";
+    public static final ResourceBundle resourceBundle =
             ResourceBundle.getBundle(BUNDLE_NAME, new Locale(UA));
 
     /**
