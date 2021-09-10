@@ -103,4 +103,17 @@ public class InputNoteBook {
         model.setField("firstName", this.firstName);
     }
 
+    public void inputLogin(){
+        UtilityController utilityController =
+                new UtilityController(scanner, view);
+        this.login = utilityController.inputStringValueWithScanner
+                        (GET_NICKNAME, View.getString(LOGIN));
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+    public String getLogin() {
+        return login;
+    }
+
 }
