@@ -1,14 +1,14 @@
 package com.denis.model;
 
 public class NotUniqueLoginException extends Exception{
-    private String loginData;
+    private String login;
 
-    public String getLoginData() {
-        return loginData;
+    public String getLogin() {
+        return login;
     }
 
     public NotUniqueLoginException(String message, String loginData) {
         super(message);
-        this.loginData = loginData;
+        this.login = loginData;
     }
 }

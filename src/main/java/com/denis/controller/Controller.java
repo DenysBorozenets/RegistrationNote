@@ -2,7 +2,6 @@ package com.denis.controller;
 
 import com.denis.model.Model;
 import com.denis.model.NotUniqueLoginException;
-import com.denis.model.NoteBook;
 import com.denis.view.View;
 
 import java.util.Scanner;
@@ -17,27 +16,21 @@ public class Controller {
     }
 
     public void processUser() {
+        boolean validation = false;
         Scanner scanner = new Scanner(System.in);
         InputNoteBook inputNoteBook = new InputNoteBook(view, scanner, model);
-        inputNoteBook.InputNote();
+        inputNoteBook.inputNote();
 
-        NoteBook noteBook = getNoteBook(inputNoteBook);
-        System.out.println(noteBook);
-    }
 
-    private NoteBook getNoteBook(InputNoteBook inputNoteBook) {
-        NoteBook noteBook = null;
-        while(true) {
+        while (!validation) {
             try {
-                noteBook = new NoteBook(noteBook.getFirstName(),
-                        inputNoteBook.getLogin());
-                break;
+                validation = model.validationLogin();
             } catch (NotUniqueLoginException e) {
                 e.printStackTrace();
-                System.out.println("Repeated login " + e.getLoginData());
+                System.out.println("Repeated login " + e.getLogin());
                 inputNoteBook.inputLogin();
             }
         }
-        return noteBook;
     }
+
 }

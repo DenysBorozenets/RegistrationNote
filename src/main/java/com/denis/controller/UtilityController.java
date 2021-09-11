@@ -23,15 +23,15 @@ public class UtilityController {
         return res;
     }
 
-    public String inputTextValueWithScanner(String message, String regex) {
-        String res;
-        view.printInputString(message);
-        scanner.nextLine();
-        while (!(scanner.hasNextLine() && (res = scanner.nextLine()).matches(regex))) {
-            view.printWrongInput(message);
-        }
-        return res;
-    }
+//    public String inputTextValueWithScanner(String message, String regex) {
+//        String res;
+//        view.printInputString(message);
+//        scanner.nextLine();
+//        while (!(scanner.hasNextLine() && (res = scanner.nextLine()).matches(regex))) {
+//            view.printWrongInput(message);
+//        }
+//        return res;
+//    }
 
     public Group inputGroup(String message, String regex) {
         String res;

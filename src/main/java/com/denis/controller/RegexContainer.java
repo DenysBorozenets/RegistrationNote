@@ -1,8 +1,8 @@
 package com.denis.controller;
 
 public interface RegexContainer {
-    String REGEX_NAME_UKR = "^[А-ЩЬЮЯҐІЇЄ][а-щьюяґіїє']{1,20}$";
-    String REGEX_NAME_LAT = "^[A-Z][a-z]{1,20}$";
+//    String REGEX_NAME_UKR = "^[А-ЩЬЮЯҐІЇЄ][а-щьюяґіїє']{1,20}$";
+//    String REGEX_NAME_LAT = "^[A-Z][a-z]{1,20}$";
 
     String NAME = "regex.registration.name.regexp";
     String ANY = "regex.registration.any.regexp";

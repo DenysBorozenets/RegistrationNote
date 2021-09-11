@@ -45,7 +45,7 @@ public class InputNoteBook {
         this.model = model;
     }
 
-    public void InputNote() {
+    public void inputNote() {
         UtilityController utilityController =
                 new UtilityController(scanner, view);
 //        String str = String.valueOf(View.resourceBundle.getLocale()).equals("ua")
@@ -98,22 +98,14 @@ public class InputNoteBook {
         this.date = utilityController.
                 inputStringValueWithScanner(GET_DATE, View.getString(DATE));
 
-
-
         model.setField("firstName", this.firstName);
+        model.setField("login", this.login);
     }
 
     public void inputLogin(){
-        UtilityController utilityController =
-                new UtilityController(scanner, view);
+        UtilityController utilityController = new UtilityController(scanner, view);
         this.login = utilityController.inputStringValueWithScanner
                         (GET_NICKNAME, View.getString(LOGIN));
+        model.setField("login", this.login);
     }
-    public String getFirstName() {
-        return firstName;
-    }
-    public String getLogin() {
-        return login;
-    }
-
 }

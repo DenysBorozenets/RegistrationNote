@@ -1,30 +1,28 @@
 package com.denis.model;
 
-public enum DBNoteBook {
-    NOTE_ONE("Денис", "Dines"),
-    NOTE_TWO("Микола","nik12345"),
-    NOTE_THREE ("Петро","shoko123");
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-    private final String firstName;
-    private final String login;
+public class DBNoteBook {
+    private List<Map<String, String>> list = new ArrayList<Map<String, String>>();
 
-    DBNoteBook(String firstName, String login) {
-        this.firstName = firstName;
-        this.login = login;
+     DBNoteBook() {
+        Map<String, String> sampleFields = new HashMap<String, String>();
+
+        sampleFields.put("firstName", "Денис");
+        sampleFields.put("login", "taras123");
+
+        list.add(sampleFields);
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-    public String getLogin() {
-        return login;
-    }
-
-    public static boolean checkLogin (String loginData){
-        for (DBNoteBook note : DBNoteBook.values()){
-            if (note.getLogin().equals(loginData)){
-                return true;}
+    public boolean checkLogin(String loginD){
+        for (Map<String, String> m : list) {
+            if (m.get("login").equals(loginD)) {
+                return true;
+            }
         }
-        return  false;
+        return false;
     }
 }
