@@ -7,8 +7,8 @@ public class NotUniqueLoginException extends Exception{
         return login;
     }
 
-    public NotUniqueLoginException(String message, String loginData) {
+    public NotUniqueLoginException(String message, String login) {
         super(message);
-        this.login = loginData;
+        this.login = login;
     }
 }

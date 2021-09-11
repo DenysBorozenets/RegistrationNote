@@ -19,7 +19,7 @@ public class Controller {
         boolean validation = false;
         Scanner scanner = new Scanner(System.in);
         InputNoteBook inputNoteBook = new InputNoteBook(view, scanner, model);
-        inputNoteBook.inputNote();
+        inputNoteBook.fillAll();
 
 
         while (!validation) {

@@ -16,7 +16,7 @@ public class Model {
         if (dbNoteBook.checkLogin(login)) {
             throw new NotUniqueLoginException("Login repeated ", login);
         } else {
-            return false;
+            return true;
         }
     }
 
